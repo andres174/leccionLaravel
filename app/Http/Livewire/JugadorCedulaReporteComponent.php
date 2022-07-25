@@ -6,7 +6,7 @@ use Livewire\Component;
 
 class JugadorCedulaReporteComponent extends Component
 {
-    public function render()
+    public function render($report)
     {
         return view('livewire.jugador-cedula-reporte-component');
     }

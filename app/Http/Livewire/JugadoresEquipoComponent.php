@@ -34,17 +34,15 @@ class JugadoresEquipoComponent extends Component
     public function generarReporte()
     {   
         
-        /* $j = DB::table('jugadors')
+        $j = DB::table('jugadors')
         ->join('equipos', 'jugadors.id_equipo', '=', 'equipos.id')
         ->select('jugadors.*', 'equipos.nombreEquipo as nombre_equipo')
         ->where( 'cedula', '=', '1785694862')
-        ->get(); */
-        $j = Jugador::all();
+        ->get();
 
-        $pdf = PDF::loadView('livewire.jugador-cedula-reporte-component.blade', compact('j'));
+        return view('livewire.jugadores-equipo-component', compact('j'));
 
-        return $pdf->download('archivo.pdf');
-
+        
 
         
         
